@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="เลิศน้อยป่นแจ่ว อาหารอีสานตำมือ ไม่ใส่สารกันเสีย ลาบหมู ป่นปลา ซุบมะเขือ ต้มปลานิล ปิ้งไก่บ้าน จากร้านที่ตลาดสดเทศบาลเมืองพล อ.พล จ.ขอนแก่น ดูเมนูและราคาได้ที่นี่">
+<meta property="og:title" content="เลิศน้อยป่นแจ่ว — อาหารอีสานตำมือ เมืองพล">
+<meta property="og:description" content="ดูเมนูและราคา ร้านอยู่ที่ตลาดสดเทศบาลเมืองพล อ.พล จ.ขอนแก่น">
+<meta property="og:image" content="https://lert-noi-jaew.web.app/images/menu1.jpg">
+<meta property="og:url" content="https://lert-noi-jaew.web.app">
+<title>เลิศน้อยป่นแจ่ว — อาหารอีสานตำมือ เมืองพล ขอนแก่น</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+  :root{--charcoal:#241a14;--charcoal-2:#332419;--cream:#f4ead2;--cream-2:#ece0c2;--chili:#bc3a1d;--chili-dark:#8f2a15;--gold:#cf9a3e;--herb:#5c6b3f;--fb-blue:#1877F2;--ink:#241a14;--paper:#fbf6e9;--radius-tag:4px;}
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Sarabun', sans-serif; background:var(--paper); color:var(--ink); line-height:1.6;}
+  h1,h2,h3{font-family:'Chonburi', cursive; font-weight:400; line-height:1.25;}
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 24px;}
+
+  header{position:sticky; top:0; z-index:50; background:var(--charcoal); border-bottom:3px solid var(--chili);}
+  .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 24px; max-width:1120px; margin:0 auto; gap:16px;}
+  .logo{display:flex; align-items:center; gap:10px; color:var(--cream); font-size:1.3rem;}
+  .logo span.dot{width:10px; height:10px; border-radius:50%; background:var(--chili); box-shadow:0 0 0 3px rgba(207,154,62,.35);}
+  .logo small{display:block; font-family:'Sarabun'; font-size:.68rem; color:var(--gold); font-weight:600;}
+  nav.links{display:flex; gap:26px;}
+  nav.links a{color:var(--cream-2); font-size:.95rem; padding:6px 2px; border-bottom:2px solid transparent;}
+  nav.links a:hover{border-color:var(--gold); color:var(--gold);}
+  .fb-btn{display:flex; align-items:center; gap:7px; background:var(--fb-blue); color:#fff; padding:9px 15px; border-radius:var(--radius-tag); font-size:.88rem; font-weight:600;}
+  .fb-btn:hover{filter:brightness(1.08);}
+
+  .hero{position:relative; color:var(--cream); background:repeating-linear-gradient(115deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 26px, rgba(0,0,0,.18) 27px, rgba(0,0,0,.18) 29px), radial-gradient(ellipse at 75% 20%, rgba(207,154,62,.20), transparent 55%), linear-gradient(180deg, var(--charcoal) 0%, var(--charcoal-2) 100%); padding:92px 24px 104px; overflow:hidden;}
+  .hero-grid{max-width:1120px; margin:0 auto; display:grid; grid-template-columns:1.1fr .9fr; gap:48px; align-items:center;}
+  .kicker{color:var(--gold); font-size:.92rem; margin-bottom:14px; display:flex; align-items:center; gap:10px;}
+  .kicker::before{content:""; width:26px; height:2px; background:var(--gold);}
+  .hero h1{font-size:clamp(2.2rem, 4.6vw, 3.3rem); max-width:13ch;}
+  .hero h1 em{color:var(--gold); font-style:normal;}
+  .hero p{margin-top:20px; max-width:48ch; color:var(--cream-2); font-size:1.05rem;}
+  .hero-cta{display:flex; gap:14px; margin-top:32px; flex-wrap:wrap;}
+  .btn{display:inline-flex; align-items:center; gap:8px; padding:14px 24px; border-radius:var(--radius-tag); font-weight:600; border:2px solid transparent;}
+  .btn-primary{background:var(--chili); color:var(--cream);}
+  .btn-ghost{border-color:var(--cream-2); color:var(--cream);}
+  .hero-stats{display:flex; gap:26px; margin-top:38px; flex-wrap:wrap;}
+  .hero-jar{position:relative; aspect-ratio:1/1; width:100%; max-width:360px; margin:0 auto;}
+  .jar-ring{position:absolute; inset:0; border-radius:50%; background:conic-gradient(from 220deg, var(--gold), var(--chili), var(--herb), var(--gold)); padding:8px;}
+  .jar-inner{width:100%; height:100%; border-radius:50%; overflow:hidden;}
+  .jar-inner img{width:100%; height:100%; object-fit:cover;}
+  .hero-badge{position:absolute; bottom:-16px; left:-16px; background:var(--paper); color:var(--charcoal); padding:12px 18px; border-radius:var(--radius-tag); box-shadow:0 10px 28px rgba(0,0,0,.35); font-size:.88rem; max-width:200px;}
+  .hero-badge strong{display:block; font-family:'Chonburi',cursive; font-size:1.05rem; color:var(--chili-dark);}
+
+  section{padding:80px 0;}
+  .section-head{margin-bottom:36px;}
+  .kicker-lite{color:var(--chili-dark); font-size:.88rem; margin-bottom:8px; display:flex; align-items:center; gap:8px;}
+  .kicker-lite::before{content:""; width:20px; height:2px; background:currentColor;}
+  .section-head h2{font-size:1.9rem; color:var(--charcoal);}
+  .section-head p{max-width:46ch; color:#5a4d3e; margin-top:8px;}
+
+  .menu-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(270px, 1fr)); gap:22px;}
+  .dish{position:relative; background:var(--cream); border:1px solid #e2d3a9; padding:22px 20px 20px; display:flex; flex-direction:column; gap:10px;}
+  .dish::before{content:""; position:absolute; top:0; left:0; bottom:0; width:5px; background:var(--chili);}
+  .dish-img{width:calc(100% + 40px); max-width:none; margin:-22px -20px 4px; aspect-ratio:4/3; object-fit:cover;}
+  .dish-name{font-family:'Chonburi',cursive; font-size:1.08rem; color:var(--charcoal);}
+  .dish-desc{font-size:.88rem; color:#5a4d3e;}
+  .dish-bottom{border-top:1px dashed #cbb886; padding-top:12px;}
+  .price{font-family:'Chonburi',cursive; color:var(--chili-dark); font-size:1.02rem;}
+
+  .story{background:var(--charcoal); color:var(--cream);}
+  .story-grid{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center;}
+  .story h2{font-size:1.9rem; color:var(--cream); margin-bottom:18px;}
+  .story p{color:var(--cream-2); margin-bottom:14px; max-width:50ch;}
+  .story-figures{display:flex; gap:36px; margin-top:26px; flex-wrap:wrap;}
+  .fig strong{display:block; font-family:'Chonburi',cursive; font-size:1.6rem; color:var(--gold);}
+  .fig span{font-size:.85rem; color:var(--cream-2);}
+  .story-art{aspect-ratio:4/3; border:2px solid #4a3826; overflow:hidden;}
+  .story-art video{width:100%; height:100%; object-fit:cover; display:block;}
+
+  .fb-section{background:var(--cream-2);}
+  .fb-grid{display:grid; grid-template-columns:1fr auto; gap:40px; align-items:center; background:var(--paper); border:1px solid #e2d3a9; padding:36px;}
+  .fb-grid h2{font-size:1.6rem; color:var(--charcoal); margin-bottom:10px;}
+  .fb-grid p{color:#5a4d3e; max-width:52ch;}
+  .fb-link{display:inline-block; background:var(--fb-blue); color:#fff; padding:10px 18px; border-radius:var(--radius-tag); margin-top:14px; font-weight:600;}
+  #fbQR{background:#fff; padding:14px; border-radius:8px;}
+
+  footer{background:var(--charcoal-2); color:var(--cream-2); padding:60px 0 28px;}
+  .footer-grid{display:grid; grid-template-columns:1.3fr 1fr; gap:40px; padding-bottom:36px; border-bottom:1px solid #4a3826;}
+  footer h3{color:var(--cream); font-size:1.15rem; margin-bottom:14px;}
+  footer p, footer li{font-size:.9rem;}
+  footer ul{list-style:none;}
+  footer li{margin-bottom:8px;}
+  .foot-bottom{padding-top:22px; font-size:.8rem; color:#8a7a5e;}
+
+  .fab-fb{position:fixed; bottom:26px; right:26px; z-index:80; background:var(--fb-blue); width:58px; height:58px; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 8px 22px rgba(0,0,0,.35);}
+
+  @media (max-width:880px){
+    .hero-grid,.story-grid,.footer-grid,.fb-grid{grid-template-columns:1fr;}
+    .fb-grid{text-align:center;}
+    .story-art{order:-1;}
+    nav.links{display:none;}
+  }
+  @media (max-width:520px){
+    .hero{padding:60px 20px 76px;}
+    .fb-btn span{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo"><span class="dot"></span>
+      <div>เลิศน้อยป่นแจ่ว<small>อาหารอีสานตำมือ · เมืองพล</small></div>
+    </div>
+    <nav class="links">
+      <a href="#menu">เมนู</a>
+      <a href="#story">เรื่องราว</a>
+      <a href="#shop">ที่ตั้งร้าน</a>
+      <a href="#facebook">Facebook</a>
+    </nav>
+    <a class="fb-btn" href="https://www.facebook.com/buy.leis.phl.chwy" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z" fill="#fff"/></svg>
+      <span>Facebook ร้าน</span>
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-grid wrap">
+    <div>
+      <div class="kicker">ป่นแจ่ว ตำมือ ทุกล็อตปรุงสด</div>
+      <h1>ป่นแจ่วตำมือ<br><em>สดใหม่ทุกวัน</em></h1>
+      <p>เลิศน้อยป่นแจ่ว ตำมือทุกล็อต ไม่ใส่สารกันเสีย ทำสดใหม่ทุกวัน แวะมาซื้อได้ที่ร้านในตลาดสดเทศบาลเมืองพล อาคาร 5 อ.พล จ.ขอนแก่น</p>
+      <div class="hero-cta">
+        <a href="#menu" class="btn btn-primary">ดูเมนูทั้งหมด</a>
+        <a href="https://www.facebook.com/buy.leis.phl.chwy" target="_blank" rel="noopener" class="btn btn-ghost">ติดต่อทาง Facebook</a>
+      </div>
+      <div class="hero-stats">
+        <div class="fig"><strong>10+ ปี</strong><span>ขายที่ตลาดสดเทศบาลเมืองพล</span></div>
+        <div class="fig"><strong>100%</strong><span>ตำมือทุกล็อต</span></div>
+      </div>
+    </div>
+    <div class="hero-jar">
+      <div class="jar-ring"><div class="jar-inner"><img src="images/menu1.jpg" alt="ลาบหมู เลิศน้อยป่นแจ่ว"></div></div>
+      <div class="hero-badge"><strong>ตำมือทุกล็อต</strong>ไม่ใส่สารกันเสีย</div>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker-lite">เมนู</div>
+      <h2>เมนูของเรา</h2>
+      <p>อาหารอีสานทำสดทุกวันจากร้านที่ตลาดสดเทศบาลเมืองพล</p>
+    </div>
+    <div class="menu-grid" id="menuGrid"></div>
+  </div>
+</section>
+
+<section class="story" id="story">
+  <div class="wrap story-grid">
+    <div>
+      <div class="kicker-lite" style="color:var(--gold)">จากครกไม้ สู่ครัวชาวเมืองพล</div>
+      <h2>กว่า 10 ปี ที่ตลาดสดเทศบาลเมืองพล</h2>
+      <p>แม่กับพ่อช่วยกันตำป่นแจ่วขายที่ตลาดสดเทศบาลเมืองพลมากว่า 10 ปี ตั้งแต่ลูกยังเรียนชั้น ป.1 จนวันนี้ลูกค้าประจำทั้งในตลาดและร้านอาหารในเมืองพลก็ยังกลับมาซื้อเสมอ</p>
+      <p>ทุกล็อตตำด้วยมือตามสูตรของบ้านเรา ไม่ใส่สารกันเสีย ทำสดใหม่เพื่อให้ได้รสชาติแบบเดียวกับที่ลูกค้าซื้อที่ตลาด</p>
+      <div class="story-figures">
+        <div class="fig"><strong>10+ ปี</strong><span>ที่ตลาดสดเทศบาลเมืองพล</span></div>
+        <div class="fig"><strong>ตำมือ</strong><span>ทุกล็อต</span></div>
+        <div class="fig"><strong>0%</strong><span>สารกันเสีย</span></div>
+      </div>
+    </div>
+    <div class="story-art">
+      <video src="media/scoop.mp4" poster="images/scoop_poster.jpg" autoplay muted loop playsinline></video>
+    </div>
+  </div>
+</section>
+
+<section id="shop">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker-lite">บรรยากาศร้าน</div>
+      <h2>แวะมาที่ร้านได้ที่ตลาดสดเทศบาลเมืองพล</h2>
+      <p>อาคาร 5 อำเภอพล จังหวัดขอนแก่น</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;">
+      <img src="images/shop1.jpg" alt="หน้าร้านเลิศน้อยป่นแจ่ว" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;">
+      <img src="images/shop2.jpg" alt="ทางเดินตลาดสดเทศบาลเมืองพล" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;">
+    </div>
+  </div>
+</section>
+
+<section class="fb-section" id="facebook">
+  <div class="wrap">
+    <div class="fb-grid">
+      <div>
+        <h2>ติดตามร้านทาง Facebook</h2>
+        <p>สอบถามเมนูของวันนี้ หรือติดตามข่าวสารจากร้าน ทักมาทาง Facebook ได้เลย หรือสแกน QR เพื่อเปิดหน้า Facebook ของร้าน</p>
+        <a class="fb-link" href="https://www.facebook.com/buy.leis.phl.chwy" target="_blank" rel="noopener">เปิด Facebook ร้าน →</a>
+      </div>
+      <div id="fbQR"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h3>เลิศน้อยป่นแจ่ว</h3>
+        <p>อาหารอีสานตำมือ ไม่ใส่สารกันเสีย จากร้านที่ตลาดสดเทศบาลเมืองพล อ.พล จ.ขอนแก่น</p>
+      </div>
+      <div>
+        <h3>ติดต่อร้าน</h3>
+        <ul>
+          <li>Facebook: <a href="https://www.facebook.com/buy.leis.phl.chwy" target="_blank" rel="noopener" style="text-decoration:underline">เลิศน้อยป่นแจ่ว</a></li>
+          <li>หน้าร้าน: ตลาดสดเทศบาลเมืองพล อาคาร 5 อ.พล จ.ขอนแก่น</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2569 เลิศน้อยป่นแจ่ว</div>
+  </div>
+</footer>
+
+<a class="fab-fb" href="https://www.facebook.com/buy.leis.phl.chwy" target="_blank" rel="noopener" aria-label="Facebook ร้าน">
+  <svg width="26" height="26" viewBox="0 0 24 24"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z" fill="#fff"/></svg>
+</a>
+
+<script>
+  /* แก้ราคาได้ที่ price: ใส่ตัวเลข เช่น price:50 / ยังไม่มีราคาใส่ price:null */
+  const FACEBOOK_URL = "https://www.facebook.com/buy.leis.phl.chwy";
+
+  const products = [
+    {name:"ลาบหมู",        desc:"ลาบหมูสูตรอีสาน ใส่สะระแหน่ หอมแดง",            img:"images/menu1.jpg",  price:50},
+    {name:"ปลาทูทอด",      desc:"ปลาทูทอดทั้งตัว ราดหอมแดง พริก บีบมะนาว",      img:"images/menu2.jpg",  price:50},
+    {name:"ปลานึ่งสมุนไพร", desc:"ปลานึ่งบนตะไคร้ ใส่ใบแมงลักหอมๆ",             img:"images/menu3.jpg",  price:80},
+    {name:"หมกหม้อปลาดุก", desc:"ปลาดุกหมกหม้อ เครื่องสมุนไพรอีสาน",            img:"images/menu4.jpg",  price:30},
+    {name:"ซุบมะเขือ",     desc:"มะเขือตำคลุกงาคั่ว ต้นหอม พริก",               img:"images/menu5.jpg",  price:20},
+    {name:"ป่นปลา",        desc:"ป่นปลาตำมือ ใส่ต้นหอม พริก",                  img:"images/menu6.jpg",  price:20},
+    {name:"ลาบวัวดิบ",     desc:"ลาบเนื้อวัวสด รสจัดแบบอีสาน",                 img:"images/menu7.jpg",  price:60},
+    {name:"ต้มปลานิล",     desc:"ต้มปลานิลรสแซ่บ ใส่มะเขือเทศ ตะไคร้ ใบมะกรูด", img:"images/menu8.jpg",  price:50},
+    {name:"นึ่งปลานิล",     desc:"ปลานิลนึ่งสมุนไพร ใส่ใบแมงลัก",                img:"images/menu9.jpg",  price:60},
+    {name:"ปิ้งไก่บ้าน",    desc:"ไก่บ้านปิ้งไม้ หนังกรอบ เนื้อแน่น",            img:"images/menu10.jpg", price:50},
+    {name:"ป่นแมงดา",      desc:"ป่นแมงดาตำมือ หอมกลิ่นแมงดา ใส่ต้นหอม พริก",    img:"images/menu11.jpg", price:20},
+    {name:"ผักลวกแจ่ว",     desc:"ผักลวกสดๆ กินคู่แจ่วรสจัด",                    img:"images/menu12.jpg", price:10},
+    {name:"อ่อมหมู",        desc:"อ่อมหมูใส่ผักชีลาว เครื่องแกงอีสาน",            img:"images/menu13.jpg", price:50},
+    {name:"อ่อมหอย",        desc:"อ่อมหอยใส่ผักบุ้ง รสเผ็ดหอมสมุนไพร",           img:"images/menu14.jpg", price:20},
+    {name:"แกงฟักใส่ไก่",   desc:"แกงฟักเขียวใส่ไก่ น้ำซุปกลมกล่อม",             img:"images/menu15.jpg", price:30},
+  ];
+
+  document.getElementById('menuGrid').innerHTML = products.map(p => `
+    <div class="dish">
+      <img class="dish-img" src="${p.img}" alt="${p.name}" loading="lazy">
+      <div class="dish-name">${p.name}</div>
+      <div class="dish-desc">${p.desc}</div>
+      <div class="dish-bottom"><div class="price">${typeof p.price === 'number' ? p.price + ' บาท' : 'สอบถามที่ร้าน'}</div></div>
+    </div>
+  `).join('');
+
+  try{ new QRCode(document.getElementById('fbQR'), { text: FACEBOOK_URL, width:130, height:130 }); }
+  catch(err){ console.warn('สร้าง QR ไม่สำเร็จ', err); }
+</script>
+</body>
+</html>

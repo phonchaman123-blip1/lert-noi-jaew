@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="เลิศน้อยป่นแจ่ว อาหารอีสานตำมือ ไม่ใส่สารกันเสีย ลาบหมู ป่นปลา ซุบมะเขือ หมกหม้อปลาดุก จากตลาดเทศบาลเมืองพล อ.พล จ.ขอนแก่น สั่งออนไลน์ ส่งฟรีในเขตเทศบาล">
+<meta property="og:title" content="เลิศน้อยป่นแจ่ว — อาหารอีสานตำมือ เมืองพล">
+<meta property="og:description" content="สั่งออนไลน์ ส่งฟรีในเขตเทศบาลเมืองพล รอบส่ง 7:30–9:00 น.">
+<meta property="og:image" content="https://lert-noi-jaew.web.app/images/menu1.jpg">
+<meta property="og:url" content="https://lert-noi-jaew.web.app">
+<title>เลิศน้อยป่นแจ่ว — อาหารอีสานตำมือ เมืองพล ขอนแก่น</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://static.line-sdk.com/liff/edge/2/sdk.js"></script>
+<style>
+  :root{
+    --charcoal:#241a14;
+    --charcoal-2:#332419;
+    --cream:#f4ead2;
+    --cream-2:#ece0c2;
+    --chili:#bc3a1d;
+    --chili-dark:#8f2a15;
+    --gold:#cf9a3e;
+    --herb:#5c6b3f;
+    --line-green:#06c755;
+    --ink:#241a14;
+    --paper:#fbf6e9;
+    --radius-tag: 4px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Sarabun', sans-serif; background:var(--paper); color:var(--ink); line-height:1.6;}
+  h1,h2,h3,.display{font-family:'Chonburi', cursive; font-weight:400; line-height:1.25;}
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 24px;}
+
+  /* ---------- Header ---------- */
+  header{position:sticky; top:0; z-index:50; background:var(--charcoal); border-bottom:3px solid var(--chili);}
+  .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 24px; max-width:1120px; margin:0 auto; gap:16px;}
+  .logo{display:flex; align-items:center; gap:10px; color:var(--cream); font-size:1.3rem;}
+  .logo span.dot{width:10px; height:10px; border-radius:50%; background:var(--chili); box-shadow:0 0 0 3px rgba(207,154,62,.35);}
+  .logo small{display:block; font-family:'Sarabun'; font-size:.68rem; color:var(--gold); font-weight:600; letter-spacing:.02em;}
+  nav.links{display:flex; gap:26px;}
+  nav.links a{color:var(--cream-2); font-size:.95rem; padding:6px 2px; border-bottom:2px solid transparent; transition:border-color .2s ease, color .2s ease;}
+  nav.links a:hover{border-color:var(--gold); color:var(--gold);}
+  .nav-actions{display:flex; align-items:center; gap:10px;}
+  .line-btn{
+    display:flex; align-items:center; gap:7px;
+    background:var(--line-green); color:#fff;
+    padding:9px 15px; border-radius:var(--radius-tag);
+    font-size:.88rem; font-weight:600; cursor:pointer; border:none;
+    transition:filter .2s ease;
+  }
+  .line-btn:hover{filter:brightness(1.08);}
+  .cart-btn{
+    position:relative; background:var(--chili); color:var(--cream); border:none;
+    padding:10px 18px; border-radius:var(--radius-tag); font-weight:600; font-size:.92rem;
+    cursor:pointer; display:flex; align-items:center; gap:8px; transition:background .2s ease;
+  }
+  .cart-btn:hover{background:var(--chili-dark);}
+  .cart-count{background:var(--cream); color:var(--chili-dark); border-radius:50%; width:20px; height:20px; display:flex; align-items:center; justify-content:center; font-size:.72rem; font-weight:700;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative; color:var(--cream);
+    background:
+      repeating-linear-gradient(115deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 26px, rgba(0,0,0,.18) 27px, rgba(0,0,0,.18) 29px),
+      radial-gradient(ellipse at 75% 20%, rgba(207,154,62,.20), transparent 55%),
+      linear-gradient(180deg, var(--charcoal) 0%, var(--charcoal-2) 100%);
+    padding:92px 24px 104px; overflow:hidden;
+  }
+  .hero-grid{max-width:1120px; margin:0 auto; display:grid; grid-template-columns:1.1fr .9fr; gap:48px; align-items:center;}
+  .kicker{color:var(--gold); font-size:.92rem; margin-bottom:14px; display:flex; align-items:center; gap:10px;}
+  .kicker::before{content:""; width:26px; height:2px; background:var(--gold); display:inline-block;}
+  .hero h1{font-size:clamp(2.2rem, 4.6vw, 3.3rem); max-width:13ch;}
+  .hero h1 em{color:var(--gold); font-style:normal;}
+  .hero p{margin-top:20px; max-width:48ch; color:var(--cream-2); font-size:1.05rem;}
+  .hero-cta{display:flex; gap:14px; margin-top:32px; flex-wrap:wrap;}
+  .btn{display:inline-flex; align-items:center; gap:8px; padding:14px 24px; border-radius:var(--radius-tag); font-weight:600; font-size:.98rem; cursor:pointer; border:2px solid transparent; transition:transform .15s ease, background .2s ease;}
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--chili); color:var(--cream);}
+  .btn-primary:hover{background:var(--chili-dark);}
+  .btn-ghost{border-color:var(--cream-2); color:var(--cream);}
+  .btn-ghost:hover{background:rgba(244,234,210,.08);}
+  .hero-stats{display:flex; gap:26px; margin-top:38px; flex-wrap:wrap;}
+  .hero-stats .fig strong{display:block; font-family:'Chonburi',cursive; font-size:1.5rem; color:var(--gold);}
+  .hero-stats .fig span{font-size:.8rem; color:var(--cream-2);}
+
+  .hero-jar{position:relative; aspect-ratio:1/1; max-width:360px; margin:0 auto;}
+  .jar-ring{position:absolute; inset:0; border-radius:50%; background:conic-gradient(from 220deg, var(--gold), var(--chili), var(--herb), var(--gold)); padding:8px;}
+  .jar-inner{width:100%; height:100%; border-radius:50%; background:var(--paper); display:flex; align-items:center; justify-content:center; overflow:hidden;}
+  .jar-inner svg{width:74%; height:74%;}
+  .hero-badge{position:absolute; bottom:-16px; left:-16px; background:var(--paper); color:var(--charcoal); padding:12px 18px; border-radius:var(--radius-tag); box-shadow:0 10px 28px rgba(0,0,0,.35); font-size:.88rem; max-width:200px;}
+  .hero-badge strong{display:block; font-family:'Chonburi',cursive; font-size:1.05rem; color:var(--chili-dark);}
+
+  /* ---------- Section shells ---------- */
+  section{padding:80px 0;}
+  .section-head{display:flex; justify-content:space-between; align-items:flex-end; gap:24px; margin-bottom:36px; flex-wrap:wrap;}
+  .section-head .kicker-lite{color:var(--chili-dark); font-size:.88rem; margin-bottom:8px; display:flex; align-items:center; gap:8px;}
+  .section-head .kicker-lite::before{content:""; width:20px; height:2px; background:var(--chili-dark);}
+  .section-head h2{font-size:1.9rem; color:var(--charcoal);}
+  .section-head p{max-width:46ch; color:#5a4d3e; margin-top:8px;}
+
+  .wholesale-banner{
+    background:var(--herb); color:var(--cream); padding:16px 22px; border-radius:var(--radius-tag);
+    font-size:.92rem; margin-bottom:32px; display:flex; align-items:center; gap:12px; flex-wrap:wrap;
+  }
+  .wholesale-banner strong{font-family:'Chonburi',cursive; font-weight:400;}
+
+  /* ---------- Product grid ---------- */
+  .menu-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(270px, 1fr)); gap:22px;}
+  .dish-img{width:calc(100% + 40px); max-width:none; margin:-22px -20px 4px; aspect-ratio:4/3; object-fit:cover; display:block;}
+  .dish{position:relative; background:var(--cream); border:1px solid #e2d3a9; padding:22px 20px 20px; display:flex; flex-direction:column; gap:10px;}
+  .dish::before{content:""; position:absolute; top:0; left:0; bottom:0; width:5px; background:var(--chili);}
+  .dish-name{font-family:'Chonburi',cursive; font-size:1.08rem; color:var(--charcoal);}
+  .dish-desc{font-size:.88rem; color:#5a4d3e;}
+  .size-pills{display:flex; gap:8px; flex-wrap:wrap; margin-top:4px;}
+  .size-pill{
+    border:1.5px solid #d8c79a; background:transparent; border-radius:999px; padding:7px 12px;
+    font-size:.78rem; cursor:pointer; text-align:left; color:var(--charcoal); transition:all .15s ease;
+    display:flex; flex-direction:column; gap:1px; line-height:1.3;
+  }
+  .size-pill b{font-size:.82rem;}
+  .size-pill .tier-tag{font-size:.68rem; color:var(--herb); font-weight:600;}
+  .size-pill.active{background:var(--charcoal); border-color:var(--charcoal); color:var(--cream);}
+  .size-pill.active .tier-tag{color:var(--gold);}
+  .dish-bottom{display:flex; align-items:center; justify-content:space-between; border-top:1px dashed #cbb886; padding-top:12px; margin-top:2px;}
+  .price{font-family:'Chonburi',cursive; color:var(--chili-dark); font-size:1.02rem;}
+  .add-btn{background:var(--charcoal); color:var(--cream); border:none; padding:8px 16px; border-radius:var(--radius-tag); font-size:.86rem; cursor:pointer; transition:background .18s ease;}
+  .add-btn:hover{background:var(--chili);}
+  .add-btn.added{background:var(--herb);}
+
+  /* ---------- Story ---------- */
+  .story{background:var(--charcoal); color:var(--cream);}
+  .story-grid{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center;}
+  .story h2{font-size:1.9rem; color:var(--cream); margin-bottom:18px;}
+  .story p{color:var(--cream-2); margin-bottom:14px; max-width:50ch;}
+  .story-figures{display:flex; gap:36px; margin-top:26px; flex-wrap:wrap;}
+  .fig strong{display:block; font-family:'Chonburi',cursive; font-size:1.7rem; color:var(--gold);}
+  .fig span{font-size:.85rem; color:var(--cream-2);}
+  .story-art{aspect-ratio:4/3; border:2px solid #4a3826; background:repeating-linear-gradient(45deg, rgba(207,154,62,.06) 0 12px, transparent 12px 24px); display:flex; align-items:center; justify-content:center;}
+  .story-art svg{width:56%;}
+
+  /* ---------- Steps ---------- */
+  .steps{background:var(--paper);}
+  .steps-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+  .step{background:var(--cream); border:1px solid #e2d3a9; padding:26px 20px;}
+  .step-num{font-family:'Chonburi',cursive; font-size:1.6rem; color:var(--chili); margin-bottom:10px;}
+  .step h3{font-size:1rem; color:var(--charcoal); margin-bottom:8px; font-family:'Sarabun'; font-weight:700;}
+  .step p{font-size:.86rem; color:#5a4d3e;}
+
+  /* ---------- LINE section ---------- */
+  .line-section{background:var(--cream-2);}
+  .line-grid{display:grid; grid-template-columns:1fr auto; gap:40px; align-items:center; background:var(--paper); border:1px solid #e2d3a9; padding:36px; }
+  .line-grid h2{font-size:1.6rem; color:var(--charcoal); margin-bottom:10px; display:flex; align-items:center; gap:10px;}
+  .line-grid p{color:#5a4d3e; max-width:52ch; margin-bottom:6px;}
+  .line-id-box{display:inline-flex; align-items:center; gap:8px; background:var(--charcoal); color:var(--cream); padding:9px 16px; border-radius:var(--radius-tag); margin-top:12px; font-weight:600;}
+  #lineQR{display:flex; align-items:center; justify-content:center; background:#fff; padding:14px; border-radius:8px;}
+
+  /* ---------- Contact / footer ---------- */
+  footer{background:var(--charcoal-2); color:var(--cream-2); padding:60px 0 28px;}
+  .footer-grid{display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:40px; padding-bottom:36px; border-bottom:1px solid #4a3826;}
+  footer h3{font-family:'Chonburi',cursive; color:var(--cream); font-size:1.15rem; margin-bottom:14px;}
+  footer p, footer li{color:var(--cream-2); font-size:.9rem;}
+  footer ul{list-style:none;}
+  footer li{margin-bottom:8px;}
+  .foot-bottom{display:flex; justify-content:space-between; padding-top:22px; font-size:.8rem; color:#8a7a5e; flex-wrap:wrap; gap:10px;}
+
+  /* ---------- floating LINE button ---------- */
+  .fab-line{
+    position:fixed; bottom:26px; right:26px; z-index:80;
+    background:var(--line-green); color:#fff; width:58px; height:58px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center; box-shadow:0 8px 22px rgba(0,0,0,.35);
+    font-size:1.5rem; cursor:pointer; transition:transform .18s ease;
+  }
+  .fab-line:hover{transform:scale(1.08);}
+
+  /* ---------- Cart drawer ---------- */
+  .overlay{position:fixed; inset:0; background:rgba(20,14,8,.5); opacity:0; pointer-events:none; transition:opacity .25s ease; z-index:90;}
+  .overlay.open{opacity:1; pointer-events:auto;}
+  .cart-drawer{position:fixed; top:0; right:-420px; width:100%; max-width:400px; height:100%; background:var(--paper); z-index:95; box-shadow:-12px 0 40px rgba(0,0,0,.3); display:flex; flex-direction:column; transition:right .28s ease;}
+  .cart-drawer.open{right:0;}
+  .cart-head{background:var(--charcoal); color:var(--cream); padding:20px 22px; display:flex; justify-content:space-between; align-items:center;}
+  .cart-head h3{font-family:'Chonburi',cursive; font-size:1.2rem;}
+  .close-btn{background:none; border:none; color:var(--cream); font-size:1.4rem; cursor:pointer;}
+  .cart-body{flex:1; overflow-y:auto; padding:18px 22px;}
+  .cart-empty{color:#8a7a56; font-size:.9rem; text-align:center; margin-top:40px;}
+  .cart-item{display:flex; justify-content:space-between; gap:10px; padding:14px 0; border-bottom:1px dashed #cbb886;}
+  .ci-name{font-weight:600; font-size:.92rem; color:var(--charcoal);}
+  .ci-price{font-size:.8rem; color:#8a7a56;}
+  .ci-controls{display:flex; align-items:center; gap:8px; margin-top:6px;}
+  .qty-btn{width:24px; height:24px; border:1px solid #cbb886; background:var(--cream); cursor:pointer; font-size:.9rem; border-radius:3px;}
+  .ci-remove{font-size:.76rem; color:var(--chili); cursor:pointer; margin-top:6px; display:inline-block;}
+  .cart-foot{border-top:2px solid var(--charcoal); padding:18px 22px 24px;}
+  .cart-total{display:flex; justify-content:space-between; font-family:'Chonburi',cursive; font-size:1.15rem; color:var(--charcoal); margin-bottom:6px;}
+  .cart-note{font-size:.78rem; color:#8a7a56; margin-bottom:12px;}
+  .checkout-btn{width:100%; background:var(--chili); color:var(--cream); border:none; padding:14px; border-radius:var(--radius-tag); font-weight:600; font-size:.98rem; cursor:pointer;}
+  .checkout-btn:hover{background:var(--chili-dark);}
+  .checkout-btn.secondary{background:var(--charcoal); margin-top:10px;}
+  .checkout-btn.secondary:hover{background:#3a2c1e;}
+
+  .form-group{margin-bottom:14px;}
+  .form-group label{display:block; font-size:.84rem; margin-bottom:6px; color:var(--charcoal); font-weight:600;}
+  .form-group input, .form-group textarea, .form-group select{width:100%; padding:10px 12px; border:1.5px solid #d8c79a; border-radius:4px; font-family:'Sarabun'; font-size:.9rem; background:var(--cream);}
+  .form-group input:focus, .form-group textarea:focus, .form-group select:focus{outline:2px solid var(--chili); outline-offset:1px; border-color:var(--chili);}
+  .back-link{font-size:.84rem; color:var(--chili-dark); cursor:pointer; display:inline-block; margin-bottom:14px;}
+
+  .pay-option{border:1.5px solid #d8c79a; border-radius:var(--radius-tag); padding:14px; margin-bottom:12px; cursor:pointer; transition:border-color .15s ease, background .15s ease;}
+  .pay-option.active{border-color:var(--chili); background:var(--cream-2);}
+  .pay-option-head{display:flex; justify-content:space-between; align-items:center; font-weight:600; font-size:.92rem; color:var(--charcoal);}
+  .pay-option-desc{font-size:.8rem; color:#5a4d3e; margin-top:4px;}
+  .pay-detail{margin-top:14px; text-align:center;}
+  .pay-detail #qrHolder{display:flex; justify-content:center; padding:14px; background:#fff; border-radius:8px;}
+  .bank-row{display:flex; justify-content:space-between; align-items:center; background:#fff; border:1px solid #e2d3a9; padding:10px 12px; border-radius:4px; margin-top:10px; font-size:.86rem;}
+  .copy-btn{background:var(--charcoal); color:var(--cream); border:none; padding:6px 12px; border-radius:3px; font-size:.76rem; cursor:pointer;}
+
+  .success-view{padding:36px 22px; text-align:center;}
+  .success-view .check{width:60px; height:60px; border-radius:50%; background:var(--herb); color:var(--cream); display:flex; align-items:center; justify-content:center; margin:0 auto 16px; font-size:1.7rem;}
+  .success-view h3{font-family:'Chonburi',cursive; font-size:1.25rem; margin-bottom:8px; color:var(--charcoal);}
+  .success-view p{color:#5a4d3e; font-size:.9rem; margin-bottom:6px;}
+  .order-id{font-family:'Chonburi',cursive; color:var(--chili-dark); font-size:1.05rem; margin:12px 0;}
+
+  @media (max-width: 880px){
+    .hero-grid{grid-template-columns:1fr;}
+    .story-grid{grid-template-columns:1fr;}
+    .story-art{order:-1;}
+    .steps-grid{grid-template-columns:1fr 1fr;}
+    .footer-grid{grid-template-columns:1fr;}
+    .line-grid{grid-template-columns:1fr; text-align:center;}
+    nav.links{display:none;}
+  }
+  @media (max-width:520px){
+    .steps-grid{grid-template-columns:1fr;}
+    .hero{padding:60px 20px 76px;}
+    .nav-actions .line-btn span{display:none;}
+  }
+  @media (prefers-reduced-motion: reduce){ *{transition:none !important; scroll-behavior:auto !important;} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo"><span class="dot"></span>
+      <div>เลิศน้อยป่นแจ่ว<small>อาหารอีสานตำมือ · เมืองพล</small></div>
+    </div>
+    <nav class="links">
+      <a href="#menu">สินค้า</a>
+      <a href="#story">เรื่องราว</a>
+      <a href="#steps">วิธีสั่ง</a>
+      <a href="#line">แอดไลน์</a>
+      <a href="#contact">ติดต่อ</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="line-btn" href="https://line.me/R/ti/p/@052mqhax" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 5.7 2 10.2c0 4.02 3.58 7.4 8.42 8.06.33.07.78.22.89.5.1.26.06.66.03.92l-.14 1c-.04.29-.23 1.13.99.62 1.22-.52 6.6-3.89 9-6.66C22.5 12.9 22 10.1 22 10.2 22 5.7 17.52 2 12 2z" fill="#fff"/></svg>
+        <span>แอดไลน์ OA</span>
+      </a>
+      <button class="cart-btn" id="cartToggle">ตะกร้า <span class="cart-count" id="cartCount">0</span></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-grid wrap">
+    <div>
+      <div class="kicker">ป่นแจ่ว ตำมือ ทุกล็อตปรุงสด</div>
+      <h1>ป่นแจ่วตำมือ<br><em>สดใหม่ทุกวัน</em></h1>
+      <p>เลิศน้อยป่นแจ่ว ตำมือทุกล็อต ไม่ใส่สารกันเสีย สั่งออนไลน์ได้แล้ว จัดส่งฟรีในเขตเทศบาลเมืองพล รอบส่ง 7:30–9:00 น.</p>
+      <div class="hero-cta">
+        <a href="#menu" class="btn btn-primary">ดูเมนูทั้งหมด</a>
+        <a href="https://line.me/R/ti/p/@052mqhax" target="_blank" rel="noopener" class="btn btn-ghost">คุยผ่าน LINE OA</a>
+      </div>
+      <div class="hero-stats">
+        <div class="fig"><strong>10+ ปี</strong><span>ขายที่ตลาดเทศบาลเมืองพล</span></div>
+        <div class="fig"><strong>100%</strong><span>ตำมือทุกล็อต</span></div>
+        <div class="fig"><strong>เมืองพล</strong><span>ส่งฟรีในเขตเทศบาล</span></div>
+      </div>
+    </div>
+    <div class="hero-jar">
+      <div class="jar-ring"><div class="jar-inner">
+        <svg viewBox="0 0 200 200" fill="none">
+          <rect x="65" y="55" width="70" height="105" rx="10" fill="#f4ead2" stroke="#241a14" stroke-width="3"/>
+          <rect x="72" y="40" width="56" height="20" rx="4" fill="#cf9a3e" stroke="#241a14" stroke-width="3"/>
+          <rect x="70" y="80" width="60" height="72" rx="4" fill="#bc3a1d"/>
+          <circle cx="90" cy="100" r="4" fill="#5c6b3f"/>
+          <circle cx="110" cy="112" r="4" fill="#5c6b3f"/>
+          <circle cx="98" cy="128" r="4" fill="#5c6b3f"/>
+          <circle cx="115" cy="95" r="3" fill="#e8d7a8"/>
+        </svg>
+      </div></div>
+      <div class="hero-badge"><strong>ตำมือทุกล็อต</strong>ไม่ใส่สารกันเสีย</div>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="kicker-lite">เลือกสินค้า</div>
+        <h2>เมนูของเรา</h2>
+        <p>อาหารอีสานทำสดจากร้านที่ตลาดเทศบาลเมืองพล เลือกเมนูแล้วใส่ตะกร้าได้เลย</p>
+      </div>
+    </div>
+    <div class="wholesale-banner">
+      <strong>ส่งฟรี</strong> จัดส่งฟรีในเขตเทศบาลเมืองพล อ.พล จ.ขอนแก่น (รอบส่ง 7:30–9:00 น.)
+    </div>
+    <div class="menu-grid" id="menuGrid"></div>
+  </div>
+</section>
+
+<section class="story" id="story">
+  <div class="wrap story-grid">
+    <div>
+      <div class="kicker-lite" style="color:var(--gold)">จากครกไม้ สู่ครัวชาวเมืองพล</div>
+      <h2>กว่า 10 ปี ที่ตลาดเทศบาลเมืองพล</h2>
+      <p>แม่กับพ่อช่วยกันตำป่นแจ่วขายที่ตลาดเทศบาลเมืองพลมากว่า 10 ปี ตั้งแต่ลูกยังเรียนชั้น ป.1 จนวันนี้ลูกค้าประจำทั้งในตลาดและร้านอาหารในเมืองพลก็ยังกลับมาซื้อเสมอ</p>
+      <p>ทุกล็อตตำด้วยมือตามสูตรของบ้านเรา ไม่ใส่สารกันเสีย ทำสดใหม่เพื่อให้ได้รสชาติแบบเดียวกับที่ลูกค้าซื้อที่ตลาด</p>
+      <div class="story-figures">
+        <div class="fig"><strong>10+ ปี</strong><span>ขายที่ตลาดเทศบาลเมืองพล</span></div>
+        <div class="fig"><strong>ตำมือ</strong><span>ทุกล็อต</span></div>
+        <div class="fig"><strong>0%</strong><span>สารกันเสีย</span></div>
+      </div>
+    </div>
+    <div class="story-art" style="padding:0;overflow:hidden;">
+      <video src="media/scoop.mp4" poster="images/scoop_poster.jpg" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block;"></video>
+    </div>
+  </div>
+</section>
+
+<section id="shop">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="kicker-lite">บรรยากาศร้าน</div>
+        <h2>แวะมาที่ร้านได้ที่ตลาดเทศบาลเมืองพล</h2>
+        <p>อ.พล จ.ขอนแก่น</p>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;">
+      <img src="images/shop1.jpg" alt="หน้าร้านเลิศน้อยป่นแจ่ว" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid #e2d3a9;">
+      <img src="images/shop2.jpg" alt="ทางเดินตลาดเทศบาลเมืองพล" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid #e2d3a9;">
+    </div>
+  </div>
+</section>
+
+<section class="steps" id="steps">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="kicker-lite">ง่ายใน 4 ขั้นตอน</div>
+        <h2>สั่งซื้อยังไง</h2>
+      </div>
+    </div>
+    <div class="steps-grid">
+      <div class="step"><div class="step-num">1</div><h3>เลือกเมนู</h3><p>เลือกเมนูและจำนวนที่ต้องการ</p></div>
+      <div class="step"><div class="step-num">2</div><h3>ตรวจตะกร้า</h3><p>เช็กรายการและยอดรวมก่อนยืนยัน</p></div>
+      <div class="step"><div class="step-num">3</div><h3>กรอกที่อยู่จัดส่ง</h3><p>ระบุที่อยู่ร้าน/บ้าน และเบอร์ติดต่อให้ครบ</p></div>
+      <div class="step"><div class="step-num">4</div><h3>ชำระเงิน</h3><p>โอนผ่านบัญชีธนาคาร หรือเก็บเงินปลายทาง</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="line-section" id="line">
+  <div class="wrap">
+    <div class="line-grid">
+      <div>
+        <h2>สั่งผ่าน LINE OA ก็ได้</h2>
+        <p>อยากสอบถามเมนู หรือสั่งเป็นประจำ แอดไลน์ทางร้านได้เลย</p>
+        <div class="line-id-box">LINE ID: @052mqhax</div>
+      </div>
+      <div id="lineQR"></div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h3>เลิศน้อยป่นแจ่ว</h3>
+        <p>อาหารอีสานตำมือ ไม่ใส่สารกันเสีย จากร้านที่ตลาดเทศบาลเมืองพล อ.พล จ.ขอนแก่น</p>
+      </div>
+      <div>
+        <h3>ติดต่อสั่งซื้อ</h3>
+        <ul>
+          <li>LINE OA: @052mqhax</li>
+          <li>หน้าร้าน: ตลาดเทศบาลเมืองพล อ.พล จ.ขอนแก่น</li>
+        </ul>
+      </div>
+      <div>
+        <h3>เงื่อนไขการจัดส่ง</h3>
+        <ul>
+          <li>จัดส่งฟรีในเขตเทศบาลเมืองพล อ.พล จ.ขอนแก่น</li>
+          <li>รอบจัดส่งทุกวัน เวลา 7:30–9:00 น.</li>
+          <li>ขณะนี้ยังไม่รับจัดส่งนอกเขตเทศบาลเมืองพล</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2569 เลิศน้อยป่นแจ่ว</span>
+    </div>
+  </div>
+</footer>
+
+<a class="fab-line" href="https://line.me/R/ti/p/@052mqhax" target="_blank" rel="noopener" aria-label="แอดไลน์ OA">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 5.7 2 10.2c0 4.02 3.58 7.4 8.42 8.06.33.07.78.22.89.5.1.26.06.66.03.92l-.14 1c-.04.29-.23 1.13.99.62 1.22-.52 6.6-3.89 9-6.66C22.5 12.9 22 10.1 22 10.2 22 5.7 17.52 2 12 2z" fill="#fff"/></svg>
+</a>
+
+<div class="overlay" id="overlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-head"><h3>ตะกร้าสั่งซื้อ</h3><button class="close-btn" id="closeCart">&times;</button></div>
+  <div id="drawerContent"></div>
+</aside>
+
+<script>
+  /* ---------- Product data ---------- */
+  const sizeMeta = {
+    one: { label:"1 ที่", tag:"" },
+  };
+
+  const products = [
+    {id:1, name:"ลาบหมู",          desc:"ลาบหมูสูตรอีสาน ใส่สะระแหน่ หอมแดง",          img:"images/menu1.jpg", prices:{one:50}},
+    {id:2, name:"ปลาทูทอด",        desc:"ปลาทูทอดทั้งตัว ราดหอมแดง พริก บีบมะนาว",    img:"images/menu2.jpg", prices:{one:50}},
+    {id:3, name:"ปลานึ่งสมุนไพร",   desc:"ปลานึ่งบนตะไคร้ ใส่ใบแมงลักหอมๆ",           img:"images/menu3.jpg", prices:{one:80}},
+    {id:4, name:"หมกหม้อปลาดุก",   desc:"ปลาดุกหมกหม้อ เครื่องสมุนไพรอีสาน",          img:"images/menu4.jpg", prices:{one:30}},
+    {id:5, name:"ซุบมะเขือ",       desc:"มะเขือตำคลุกงาคั่ว ต้นหอม พริก",             img:"images/menu5.jpg", prices:{one:20}},
+    {id:6, name:"ป่นปลา",          desc:"ป่นปลาตำมือ ใส่ต้นหอม พริก",                img:"images/menu6.jpg", prices:{one:20}},
+    {id:7, name:"ลาบวัวดิบ",       desc:"ลาบเนื้อวัวสด รสจัดแบบอีสาน",               img:"images/menu7.jpg", prices:{one:60}},
+    // ---- เมนูใหม่: ราคา null = ยังไม่ได้ตั้งราคา (เว็บจะแสดง "สอบถามราคา") ----
+    {id:8,  name:"ต้มปลานิล",     desc:"ต้มปลานิลรสแซ่บ ใส่มะเขือเทศ ตะไคร้ ใบมะกรูด", img:"images/menu8.jpg",  prices:{one:null}},
+    {id:9,  name:"นึ่งปลานิล",     desc:"ปลานิลนึ่งสมุนไพร ใส่ใบแมงลัก",               img:"images/menu9.jpg",  prices:{one:null}},
+    {id:10, name:"ปิ้งไก่บ้าน",    desc:"ไก่บ้านปิ้งไม้ หนังกรอบ เนื้อแน่น",           img:"images/menu10.jpg", prices:{one:null}},
+    {id:11, name:"ป่นแมงดา",      desc:"ป่นแมงดาตำมือ หอมกลิ่นแมงดา ใส่ต้นหอม พริก",   img:"images/menu11.jpg", prices:{one:null}},
+    {id:12, name:"ผักลวกแจ่ว",     desc:"ผักลวกสดๆ กินคู่แจ่วรสจัด",                   img:"images/menu12.jpg", prices:{one:null}},
+    {id:13, name:"อ่อมหมู",        desc:"อ่อมหมูใส่ผักชีลาว เครื่องแกงอีสาน",           img:"images/menu13.jpg", prices:{one:null}},
+    {id:14, name:"อ่อมหอย",        desc:"อ่อมหอยใส่ผักบุ้ง รสเผ็ดหอมสมุนไพร",          img:"images/menu14.jpg", prices:{one:null}},
+    {id:15, name:"แกงฟักใส่ไก่",    desc:"แกงฟักเขียวใส่ไก่ น้ำซุปกลมกล่อม",            img:"images/menu15.jpg", prices:{one:null}},
+  ];
+  const hasPrice = p => typeof p.prices[Object.keys(sizeMeta)[0]] === 'number';
+
+  const cardSelection = {}; // productId -> sizeKey
+  let cart = []; // {id, sizeKey, qty}
+  let view = 'cart';
+  let customerInfo = {};
+
+  const PROMPTPAY_ID = ""; // ยังไม่ได้ใช้พร้อมเพย์ (ร้านรับเฉพาะโอนธนาคาร)
+  const BANK_INFO = { bank:"ธนาคารกสิกรไทย", accName:"เลิศน้อย ป่นแจ่ว", accNo:"123-4-56789-0" };
+
+  /* ---------- LIFF (LINE Mini App) ---------- */
+  const LINE_OA_ID = "@052mqhax"; // LINE OA ของร้าน
+  const LIFF_ID = "2011619379-wEhFY9Md";
+  let lineProfile = null;
+
+  async function initLiff(){
+    if(LIFF_ID.startsWith('REPLACE')) return; // ยังไม่ได้ตั้งค่า LIFF ID จริง ข้ามการเชื่อมต่อ
+    try{
+      await liff.init({ liffId: LIFF_ID });
+      if(liff.isLoggedIn()){
+        lineProfile = await liff.getProfile();
+      }
+    }catch(err){
+      console.warn('LIFF init ไม่สำเร็จ (ปกติถ้าเปิดนอกแอป LINE):', err);
+    }
+  }
+  initLiff();
+
+  const menuGrid = document.getElementById('menuGrid');
+  const cartCount = document.getElementById('cartCount');
+  const drawer = document.getElementById('cartDrawer');
+  const overlay = document.getElementById('overlay');
+  const drawerContent = document.getElementById('drawerContent');
+
+  function renderMenu(){
+    menuGrid.innerHTML = '';
+    products.forEach(p => {
+      if(!cardSelection[p.id]) cardSelection[p.id] = Object.keys(sizeMeta)[0];
+      const el = document.createElement('div');
+      el.className = 'dish';
+      const multiSize = Object.keys(sizeMeta).length > 1;
+      el.innerHTML = `
+        ${p.img ? `<img class="dish-img" src="${p.img}" alt="${p.name}" loading="lazy">` : ''}
+        <div class="dish-name">${p.name}</div>
+        <div class="dish-desc">${p.desc}</div>
+        <div class="size-pills" data-pid="${p.id}" style="${multiSize ? '' : 'display:none'}">
+          ${Object.keys(sizeMeta).map(sk => `
+            <button class="size-pill ${cardSelection[p.id]===sk?'active':''}" data-sk="${sk}">
+              <b>${sizeMeta[sk].label}</b>
+              <span class="tier-tag">${p.prices[sk]} บาท · ${sizeMeta[sk].tag}</span>
+            </button>
+          `).join('')}
+        </div>
+        <div class="dish-bottom">
+          ${hasPrice(p)
+            ? `<div class="price" id="price-${p.id}">${p.prices[cardSelection[p.id]]} บาท</div>
+               <button class="add-btn" data-id="${p.id}">ใส่ตะกร้า</button>`
+            : `<div class="price" id="price-${p.id}" style="font-size:.95rem">สอบถามราคา</div>
+               <a class="add-btn" style="text-decoration:none;background:#06C755;" href="https://line.me/R/oaMessage/${LINE_OA_ID}/?${encodeURIComponent('สอบถามเมนู ' + p.name)}" target="_blank" rel="noopener">ถามทาง LINE</a>`}
+        </div>
+      `;
+      menuGrid.appendChild(el);
+    });
+
+    menuGrid.querySelectorAll('.size-pill').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const group = btn.parentElement;
+        const pid = parseInt(group.dataset.pid);
+        const sk = btn.dataset.sk;
+        cardSelection[pid] = sk;
+        group.querySelectorAll('.size-pill').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const p = products.find(x => x.id === pid);
+        document.getElementById(`price-${pid}`).textContent = p.prices[sk] + ' บาท';
+      });
+    });
+
+    menuGrid.querySelectorAll('.add-btn').forEach(btn => {
+      btn.addEventListener('click', () => addToCart(parseInt(btn.dataset.id), btn));
+    });
+  }
+
+  function addToCart(pid, btnEl){
+    const sk = cardSelection[pid];
+    const existing = cart.find(c => c.id === pid && c.sizeKey === sk);
+    if(existing){ existing.qty += 1; } else { cart.push({id:pid, sizeKey:sk, qty:1}); }
+    updateCartCount();
+    if(btnEl){
+      btnEl.textContent = 'ใส่แล้ว ✓';
+      btnEl.classList.add('added');
+      setTimeout(() => { btnEl.textContent = 'ใส่ตะกร้า'; btnEl.classList.remove('added'); }, 900);
+    }
+    if(view !== 'checkout' && view !== 'payment' && view !== 'success') renderDrawer();
+  }
+
+  function changeQty(pid, sk, delta){
+    const line = cart.find(c => c.id === pid && c.sizeKey === sk);
+    if(!line) return;
+    line.qty += delta;
+    if(line.qty <= 0) cart = cart.filter(c => !(c.id === pid && c.sizeKey === sk));
+    updateCartCount();
+    renderDrawer();
+  }
+  function removeItem(pid, sk){
+    cart = cart.filter(c => !(c.id === pid && c.sizeKey === sk));
+    updateCartCount();
+    renderDrawer();
+  }
+  function cartTotal(){
+    return cart.reduce((sum, c) => {
+      const p = products.find(x => x.id === c.id);
+      return sum + p.prices[c.sizeKey] * c.qty;
+    }, 0);
+  }
+  function updateCartCount(){
+    cartCount.textContent = cart.reduce((s,c) => s + c.qty, 0);
+  }
+
+  function renderDrawer(){
+    view = 'cart';
+    if(cart.length === 0){
+      drawerContent.innerHTML = `<div class="cart-body"><p class="cart-empty">ยังไม่มีรายการในตะกร้า<br>เลือกสินค้าที่ต้องการได้เลย</p></div>`;
+      return;
+    }
+    const rows = cart.map(c => {
+      const p = products.find(x => x.id === c.id);
+      const unitPrice = p.prices[c.sizeKey];
+      return `
+        <div class="cart-item">
+          <div>
+            <div class="ci-name">${p.name}</div>
+            <div class="ci-price">${sizeMeta[c.sizeKey].label} · ${unitPrice} บาท × ${c.qty}</div>
+            <div class="ci-controls">
+              <button class="qty-btn" data-act="dec" data-id="${c.id}" data-sk="${c.sizeKey}">−</button>
+              <span>${c.qty}</span>
+              <button class="qty-btn" data-act="inc" data-id="${c.id}" data-sk="${c.sizeKey}">+</button>
+            </div>
+            <span class="ci-remove" data-remove-id="${c.id}" data-remove-sk="${c.sizeKey}">นำออก</span>
+          </div>
+          <div class="price">${unitPrice * c.qty} บาท</div>
+        </div>
+      `;
+    }).join('');
+
+    drawerContent.innerHTML = `
+      <div class="cart-body">${rows}</div>
+      <div class="cart-foot">
+        <div class="cart-total"><span>รวมทั้งหมด</span><span>${cartTotal()} บาท</span></div>
+        <div class="cart-note">จัดส่งฟรีเฉพาะในเขตเทศบาลเมืองพล อ.พล จ.ขอนแก่น — รอบส่ง 7:30–9:00 น.</div>
+        <button class="checkout-btn" id="goCheckout">ดำเนินการสั่งซื้อ</button>
+      </div>
+    `;
+    drawerContent.querySelectorAll('.qty-btn').forEach(b => {
+      b.addEventListener('click', () => changeQty(parseInt(b.dataset.id), b.dataset.sk, b.dataset.act === 'inc' ? 1 : -1));
+    });
+    drawerContent.querySelectorAll('[data-remove-id]').forEach(b => {
+      b.addEventListener('click', () => removeItem(parseInt(b.dataset.removeId), b.dataset.removeSk));
+    });
+    document.getElementById('goCheckout').addEventListener('click', renderCheckout);
+  }
+
+  function renderCheckout(){
+    view = 'checkout';
+    drawerContent.innerHTML = `
+      <div class="cart-body">
+        <span class="back-link" id="backToCart">&larr; กลับไปแก้ตะกร้า</span>
+        <div class="cart-total" style="font-size:1rem; margin-bottom:18px;"><span>ยอดรวม</span><span>${cartTotal()} บาท</span></div>
+        <form id="checkoutForm">
+          <div class="form-group"><label for="fname">ชื่อผู้สั่ง / ชื่อร้าน</label><input type="text" id="fname" required placeholder="ชื่อ-นามสกุล หรือชื่อร้าน"></div>
+          <div class="form-group"><label for="fphone">เบอร์โทร</label><input type="tel" id="fphone" required placeholder="08X-XXX-XXXX"></div>
+          <div class="form-group"><label for="faddr">ที่อยู่จัดส่ง</label><textarea id="faddr" rows="3" required placeholder="บ้านเลขที่ ถนน/ซอย จุดสังเกต (เฉพาะในเขตเทศบาลเมืองพล)"></textarea></div>
+          <div class="form-group">
+            <label for="ftype">ประเภทลูกค้า</label>
+            <select id="ftype">
+              <option value="retail">ลูกค้าทั่วไป</option>
+              <option value="wholesale">ร้านค้า / ร้านอาหาร</option>
+            </select>
+          </div>
+          <div class="form-group"><label for="fnote">หมายเหตุ</label><textarea id="fnote" rows="2" placeholder="เช่น วันจัดส่งที่สะดวก"></textarea></div>
+          <button type="submit" class="checkout-btn">ไปหน้าชำระเงิน</button>
+        </form>
+      </div>
+    `;
+    if(lineProfile && lineProfile.displayName){
+      document.getElementById('fname').value = lineProfile.displayName;
+    }
+    document.getElementById('backToCart').addEventListener('click', renderDrawer);
+    document.getElementById('checkoutForm').addEventListener('submit', e => {
+      e.preventDefault();
+      customerInfo = {
+        name: document.getElementById('fname').value,
+        phone: document.getElementById('fphone').value,
+        address: document.getElementById('faddr').value,
+        type: document.getElementById('ftype').value,
+        note: document.getElementById('fnote').value
+      };
+      renderPayment();
+    });
+  }
+
+  /* ---------- PromptPay QR generation ---------- */
+  function crc16ccitt(str){
+    let crc = 0xFFFF;
+    for(let c = 0; c < str.length; c++){
+      crc ^= str.charCodeAt(c) << 8;
+      for(let i = 0; i < 8; i++){
+        crc = (crc & 0x8000) ? ((crc << 1) ^ 0x1021) : (crc << 1);
+        crc &= 0xFFFF;
+      }
+    }
+    return crc.toString(16).toUpperCase().padStart(4, '0');
+  }
+  function tlv(id, value){ return id + value.length.toString().padStart(2,'0') + value; }
+  function formatPromptPayTarget(id){
+    const digits = id.replace(/[^0-9]/g, '');
+    if(digits.length >= 13){ return { tag:'02', value: digits.substring(0,13) }; }
+    let d = digits;
+    if(d.startsWith('0')) d = d.substring(1);
+    d = ('66' + d).padStart(13, '0');
+    return { tag:'01', value:d };
+  }
+  function generatePromptPayPayload(target, amount){
+    const t = formatPromptPayTarget(target);
+    const merchantInfo = tlv('00','A000000677010111') + tlv(t.tag, t.value);
+    let payload = '';
+    payload += tlv('00','01');
+    payload += tlv('01', amount ? '12' : '11');
+    payload += tlv('29', merchantInfo);
+    payload += tlv('53','764');
+    if(amount) payload += tlv('54', amount.toFixed(2));
+    payload += tlv('58','TH');
+    payload += '6304';
+    return payload + crc16ccitt(payload);
+  }
+
+  function renderPayment(){
+    view = 'payment';
+    const total = cartTotal();
+    drawerContent.innerHTML = `
+      <div class="cart-body">
+        <span class="back-link" id="backToInfo">&larr; กลับไปแก้ข้อมูลจัดส่ง</span>
+        <div class="cart-total" style="font-size:1rem; margin-bottom:16px;"><span>ยอดที่ต้องชำระ</span><span>${total} บาท</span></div>
+
+        <div class="pay-option active" data-method="bank">
+          <div class="pay-option-head"><span>โอนผ่านธนาคาร</span></div>
+          <div class="pay-option-desc">โอนเข้าบัญชีด้านล่าง แล้วแนบสลิปยืนยันทาง LINE OA</div>
+          <div class="pay-detail" style="display:block">
+            <div class="bank-row"><span>${BANK_INFO.bank}</span></div>
+            <div class="bank-row"><span>${BANK_INFO.accName}</span></div>
+            <div class="bank-row"><span id="accNoText">${BANK_INFO.accNo}</span><button type="button" class="copy-btn" id="copyAcc">คัดลอก</button></div>
+          </div>
+        </div>
+
+        <div class="pay-option" data-method="cod">
+          <div class="pay-option-head"><span>เก็บเงินปลายทาง</span></div>
+          <div class="pay-option-desc">ชำระเงินสดกับคนส่งของ (เฉพาะในเขตเทศบาลเมืองพล อ.พล จ.ขอนแก่น)</div>
+        </div>
+
+        <button class="checkout-btn" id="confirmOrder" style="margin-top:18px;">ยืนยันคำสั่งซื้อ</button>
+      </div>
+    `;
+    document.getElementById('backToInfo').addEventListener('click', renderCheckout);
+
+    let selectedMethod = 'bank';
+    const options = drawerContent.querySelectorAll('.pay-option');
+    options.forEach(opt => {
+      opt.addEventListener('click', () => {
+        options.forEach(o => { o.classList.remove('active'); const d = o.querySelector('.pay-detail'); if(d) d.style.display = 'none'; });
+        opt.classList.add('active');
+        selectedMethod = opt.dataset.method;
+        const d = opt.querySelector('.pay-detail');
+        if(d) d.style.display = 'block';
+      });
+    });
+
+    const copyBtn = document.getElementById('copyAcc');
+    if(copyBtn){
+      copyBtn.addEventListener('click', e => {
+        e.stopPropagation();
+        navigator.clipboard.writeText(BANK_INFO.accNo).then(() => {
+          copyBtn.textContent = 'คัดลอกแล้ว';
+          setTimeout(() => copyBtn.textContent = 'คัดลอก', 1200);
+        });
+      });
+    }
+
+    document.getElementById('confirmOrder').addEventListener('click', () => renderSuccess(selectedMethod));
+  }
+
+  const methodLabel = { promptpay:'พร้อมเพย์', bank:'โอนผ่านธนาคาร', cod:'เก็บเงินปลายทาง' };
+  const typeLabel = { retail:'ลูกค้าทั่วไป', wholesale:'ร้านค้า/ร้านอาหาร' };
+
+  function buildOrderSummaryText(orderId, method){
+    const lines = cart.map(c => {
+      const p = products.find(x => x.id === c.id);
+      const unitPrice = p.prices[c.sizeKey];
+      return `- ${p.name} (${sizeMeta[c.sizeKey].label}) x${c.qty} = ${unitPrice * c.qty} บาท`;
+    }).join('\n');
+    return [
+      `📦 คำสั่งซื้อใหม่ #${orderId}`,
+      `ลูกค้า: ${customerInfo.name || '-'} (${typeLabel[customerInfo.type] || customerInfo.type || '-'})`,
+      `โทร: ${customerInfo.phone || '-'}`,
+      `ที่อยู่: ${customerInfo.address || '-'}`,
+      `หมายเหตุ: ${customerInfo.note || '-'}`,
+      '',
+      'รายการ:',
+      lines,
+      '',
+      `รวม: ${cartTotal()} บาท`,
+      `ชำระผ่าน: ${methodLabel[method] || method}`
+    ].join('\n');
+  }
+
+  async function renderSuccess(method){
+    view = 'success';
+    const orderId = 'LN' + Math.floor(1000 + Math.random()*9000);
+    const summaryText = buildOrderSummaryText(orderId, method);
+
+    let sentToChat = false;
+    if(typeof liff !== 'undefined' && !LIFF_ID.startsWith('REPLACE') && liff.isInClient && liff.isInClient()){
+      try{
+        await liff.sendMessages([{ type:'text', text: summaryText }]);
+        sentToChat = true;
+      }catch(err){
+        console.warn('ส่งสรุปออเดอร์เข้าแชทไม่สำเร็จ:', err);
+      }
+    }
+
+    drawerContent.innerHTML = `
+      <div class="success-view">
+        <div class="check">✓</div>
+        <h3>รับคำสั่งซื้อแล้ว!</h3>
+        <p>ขอบคุณที่อุดหนุนเลิศน้อยป่นแจ่ว</p>
+        <div class="order-id">หมายเลขออเดอร์ #${orderId}</div>
+        <p>ช่องทางชำระเงิน: ${methodLabel[method] || method}</p>
+        ${sentToChat
+          ? `<p style="color:#5c6b3f; font-weight:600;">ส่งสรุปคำสั่งซื้อเข้าแชทนี้ให้ร้านแล้ว ✓</p>`
+          : `<p><strong>ขั้นตอนสุดท้าย:</strong> กดปุ่มด้านล่างเพื่อส่งรายการสั่งซื้อให้ร้านทาง LINE แล้วแนบสลิปในแชทเดียวกัน</p>
+             <a class="btn" style="display:inline-block;margin-top:8px;background:#06C755;color:#fff;padding:12px 20px;border-radius:999px;text-decoration:none;font-weight:600;"
+                href="https://line.me/R/oaMessage/${LINE_OA_ID}/?${encodeURIComponent(summaryText)}" target="_blank" rel="noopener">ส่งออเดอร์ให้ร้านทาง LINE</a>`
+        }
+      </div>
+    `;
+    cart = [];
+    updateCartCount();
+  }
+
+  document.getElementById('cartToggle').addEventListener('click', () => {
+    drawer.classList.add('open');
+    overlay.classList.add('open');
+    if(view === 'success'){ view = 'cart'; renderDrawer(); }
+  });
+  function closeDrawer(){ drawer.classList.remove('open'); overlay.classList.remove('open'); }
+  document.getElementById('closeCart').addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
+
+  renderMenu();
+  renderDrawer();
+
+  /* LINE add-friend QR in page (ถ้าโหลดไลบรารี QR ไม่ได้ เมนูยังแสดงปกติ) */
+  try{
+    new QRCode(document.getElementById('lineQR'), { text:'https://line.me/R/ti/p/' + LINE_OA_ID, width:130, height:130 });
+  }catch(err){ console.warn('สร้าง QR LINE ไม่สำเร็จ:', err); }
+</script>
+</body>
+</html>
